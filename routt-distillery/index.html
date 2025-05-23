@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Routt Distillery crafts unique, small-batch whiskey, gin, and vodka in Steamboat Springs, Colorado, using local grains. Visit our family-owned tasting room!">
+    <meta name="keywords" content="Routt Distillery, Steamboat Springs, Colorado spirits, small-batch whiskey, gin, vodka, family-owned distillery">
+    <meta name="author" content="Routt Distillery">
+    <title>Routt Distillery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/routt-logo.png" type="image/png">
+    <style>
+        .hero {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto 20px;
+            min-height: 500px;
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+        }
+        .slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: fade 20s infinite;
+        }
+        .slideshow img:nth-child(1) { animation-delay: 0s; }
+        .slideshow img:nth-child(2) { animation-delay: 4s; }
+        .slideshow img:nth-child(3) { animation-delay: 8s; }
+        .slideshow img:nth-child(4) { animation-delay: 12s; }
+        .slideshow img:nth-child(5) { animation-delay: 16s; }
+        @keyframes fade {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            25% { opacity: 1; }
+            35% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #333;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 5px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .intro-section p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .section:hover {
+            background-color: rgba(248, 248, 248, 1);
+        }
+        .section img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .section .text {
+            flex: 1;
+        }
+        .section .text p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #666;
+        }
+        .splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .splash.hidden {
+            display: none;
+        }
+        .splash-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        .splash-content h2 {
+            margin: 0 0 15px;
+            color: #333;
+        }
+        .splash-content p {
+            margin: 0 0 20px;
+            font-size: 1.1em;
+        }
+        .splash-content button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .splash-content button:hover {
+            background: #666;
+        }
+        .age-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .age-banner.hidden {
+            display: none;
+        }
+        .age-banner p {
+            margin: 0;
+            font-size: 1em;
+            display: inline;
+        }
+        .age-banner button {
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .age-banner button:hover {
+            background: #bbb;
+        }
+        @media (prefers-color-scheme: dark) {
+            .hero {
+                background-color: #2a2a2a;
+            }
+            .intro-section {
+                background-color: rgba(47, 47, 47, 0.9);
+            }
+            .section {
+                background-color: rgba(47, 47, 47, 0.9);
+                padding: 20px;
+                border-radius: 15px;
+            }
+            .section:hover {
+                background-color: rgba(47, 47, 47, 1);
+            }
+            .cta-button {
+                background-color: #e0e0e0;
+                color: #333;
+            }
+            .cta-button:hover {
+                background-color: #bbb;
+            }
+            .scroll-indicator {
+                color: #e0e0e0;
+                background: rgba(26, 26, 26, 0.7);
+            }
+            .splash-content {
+                background: #333;
+                color: #e0e0e0;
+            }
+            .splash-content h2 {
+                color: #e0e0e0;
+            }
+            .splash-content button {
+                background: #e0e0e0;
+                color: #333;
+            }
+            .splash-content button:hover {
+                background: #bbb;
+            }
+            .age-banner {
+                background: rgba(47, 47, 47, 0.9);
+            }
+            .age-banner button {
+                background: #333;
+                color: #e0e0e0;
+            }
+            .age-banner button:hover {
+                background: #666;
+            }
+        }
+        @media (max-width: 768px) {
+            .section, .section.reverse {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .section img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            .section .text {
+                width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            .intro-section p {
+                font-size: 1em;
+            }
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+            .splash-content {
+                padding: 20px;
+            }
+            .age-banner p {
+                font-size: 0.9em;
+            }
+            .age-banner button {
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your experience. Choose your preference or learn more in our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+        <button onclick="acceptAllCookies()">Accept All</button>
+        <button onclick="acceptNecessaryCookies()">Accept Necessary</button>
+        <button onclick="declineCookies()">Decline</button>
+    </div>
+
+    <div id="closure-splash" class="splash hidden">
+        <div class="splash-content">
+            <h2>Sorry but we are closed</h2>
+            <p id="closure-message"></p>
+            <button onclick="closeClosure()">OK</button>
+        </div>
+    </div>
+
+    <div id="age-banner" class="age-banner">
+        <p>Must be 21+ to consume alcohol. Please drink responsibly.</p>
+        <button onclick="dismissAgeBanner()">OK</button>
+    </div>
+
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <a href="index.html" aria-label="Home"><img src="images/routt-logo.png" alt="Routt Distillery Logo" class="nav-logo"></a>
+            <a href="spirits.html">Spirits</a>
+            <a href="cocktails.html">Cocktails</a>
+            <a href="about.html">About Us</a>
+            <a href="findus.html">Find Us</a>
+        </nav>
+
+        <div class="hero">
+            <div class="slideshow">
+                <img src="images/hero1.png" alt="Scenic view of Routt Distillery landscape" loading="lazy">
+                <img src="images/hero2.png" alt="Copper stills in the distillation process" loading="lazy">
+                <img src="images/hero3.png" alt="Crafting a cocktail with Routt spirits" loading="lazy">
+                <img src="images/hero4.png" alt="Festive event at Routt Distillery" loading="lazy">
+                <img src="images/hero5.png" alt="Pouring a cocktail at Routt Distillery" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down" aria-label="Scroll down to learn more"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to Routt Distillery</h1>
+
+        <section class="intro-section">
+            <p>We make our spirits right here in Steamboat Springs - crafted by our own hands with Colorado-grown grains. Not outsourced. Not from another state. Just local, honest whiskey, gin, and vodka. As a family-owned distillery, we pour our heart into every bottle, creating delicious cocktails that shine in our tasting room against the backdrop of Steamboat’s beautiful mountain views.</p>
+            <a href="findus.html" class="cta-button">Open Friday & Saturday 1-6 pm</a>
+        </section>
+
+        <section class="section">
+            <div class="text">
+                <h2>Spirits</h2>
+                <p>At Routt Distillery, we distill every spirit from scratch in Steamboat Springs using only the finest Colorado-grown grains. Our whiskeys offer rich, layered flavors, our gins bring a crisp, balanced bite with carefully selected botanicals, and our vodka is smooth enough to savor slowly. Each bottle reflects our hands-on dedication to crafting quality spirits that stand out.</p>
+            </div>
+            <img src="images/spirits.png" alt="Bottles of Routt Distillery spirits on display" loading="lazy">
+        </section>
+
+        <section class="section reverse">
+            <div class="text">
+                <h2>Cocktails</h2>
+                <p>Our cocktails are where creativity meets craftsmanship. Designed to highlight the unique profiles of our spirits, these drinks blend local flair with a twist of family ingenuity. From refreshing gin fizzes that capture summer in a glass to robust whiskey highballs that warm you up on a snowy Steamboat night, every sip is an invitation to taste the spirit of Colorado.</p>
+            </div>
+            <img src="images/cocktails.png" alt="A signature cocktail made with Routt spirits" loading="lazy">
+        </section>
+
+        <section class="section">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>Born in 2022, Routt Distillery is more than just a business—it’s our family’s passion project. Rooted in the rugged beauty of Colorado’s landscape, we set out to create spirits that reflect the land we love. With every batch, we blend tradition with innovation, crafting small-batch whiskey, gin, and vodka that tell a story of care, community, and the mountains that inspire us.</p>
+            </div>
+            <img src="images/about.png" alt="The Routt Distillery team at work" loading="lazy">
+        </section>
+
+        <section class="section reverse">
+            <div class="text">
+                <h2>Find Us</h2>
+                <p>Join us at our Steamboat Springs tasting room, open Friday and Saturday from 1-6 pm. We’re a short drive from downtown, offering a cozy spot to enjoy our spirits and cocktails with a view. Call us at 970.367.7477 or check out our <a href="https://www.google.com/maps/place/Routt+Distillery" target="_blank" rel="noopener noreferrer">Google Maps page</a> for directions and reviews. Follow us online for updates and events—we’d love to share a drink with you!</p>
+                <p>
+                    <span class="social-icons">
+                        <a href="https://x.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:info@routtdistillery.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+                    </span>
+                </p>
+            </div>
+            <img src="images/findus.png" alt="Routt Distillery location" loading="lazy">
+        </section>
+    </div>
+
+    <footer>
+        <p>© <span id="current-year">2025</span> Routt Distillery. All rights reserved. | <a href="cookie-policy.html">Cookie Policy</a></p>
+        <p>
+            <span class="social-icons">
+                <a href="https://x.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@routtdistillery.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.google.com/maps/place/Routt+Distillery" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Google Maps"><i class="fab fa-google"></i></a>
+            </span>
+        </p>
+    </footer>
+
+    <script>
+        // Cookie Banner Functions
+        function acceptAllCookies() {
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+        function acceptNecessaryCookies() {
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+        function declineCookies() {
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        // Age Banner Function
+        function dismissAgeBanner() {
+            localStorage.setItem('ageBannerDismissed', 'true');
+            document.getElementById('age-banner').classList.add('hidden');
+        }
+
+        // Closure Splash Functions
+        function closeClosure() {
+            document.getElementById('closure-splash').classList.add('hidden');
+        }
+
+        async function fetchClosures() {
+            try {
+                const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vR-0pISPEpwkL9DUFS3jf3OQUEo62DxvSUolOabv3ZwOSZSK9W7PmaUKhFGjAdFDRR-GuVd4frG88mk/pub?output=csv');
+                const csvText = await response.text();
+                const rows = csvText.split('\n').slice(1);
+                const closures = [];
+
+                for (const row of rows) {
+                    const [startDate, endDate, nextOpen] = row.split(',').map(f => f.trim());
+                    if (startDate && endDate && nextOpen) {
+                        closures.push({ startDate, endDate, nextOpen });
+                    }
+                }
+                return closures;
+            } catch (error) {
+                console.error('Error fetching closures:', error);
+                return [];
+            }
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+        }
+
+        async function checkClosures() {
+            const closures = await fetchClosures();
+            const today = new Date();
+            const closureSplash = document.getElementById('closure-splash');
+            const closureMessage = document.getElementById('closure-message');
+
+            for (const closure of closures) {
+                const start = new Date(closure.startDate);
+                const end = new Date(closure.endDate);
+                if (today >= start && today <= end) {
+                    const startFormatted = formatDate(closure.startDate);
+                    const endFormatted = formatDate(closure.endDate);
+                    const nextOpenFormatted = formatDate(closure.nextOpen);
+                    closureMessage.textContent = `We will be closed ${startFormatted} to ${endFormatted}. We will next be open ${nextOpenFormatted}. We hope to see you then! While we are closed you can find our spirits at our retailers and partner restaurants in the Find Us tab.`;
+                    closureSplash.classList.remove('hidden');
+                    break;
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Check if age banner was dismissed
+            if (localStorage.getItem('ageBannerDismissed') === 'true') {
+                document.getElementById('age-banner').classList.add('hidden');
+            }
+
+            checkClosures();
+        });
+    </script>
+</body>
+</html>

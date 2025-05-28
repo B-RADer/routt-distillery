@@ -1,5 +1,5 @@
 name = "routt-distillery-site"
-     main = "worker.js"
+     main = "workers.js"
      compatibility_date = "2025-05-28"
 
      [[kv_namespaces]]

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Routt Distillery crafts unique, small-batch whiskey, gin, and vodka in Steamboat Springs, Colorado, using local grains. Visit our family-owned tasting room!">
+    <meta name="keywords" content="Routt Distillery, Steamboat Springs, Colorado spirits, small-batch whiskey, gin, vodka, family-owned distillery">
+    <meta name="author" content="Routt Distillery">
+    <title>Spirits - Routt Distillery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .intro-section p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .section:hover {
+            background-color: rgba(248, 248, 248, 1);
+        }
+        .section img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .section .text {
+            flex: 1;
+        }
+        .section .text p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .section .text .highlight {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #000;
+            text-decoration: none;
+        }
+        .section .text .highlight:hover {
+            color: #666;
+        }
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+        @media (prefers-color-scheme: dark) {
+            .intro-section {
+                background-color: rgba(47, 47, 47, 0.9);
+            }
+            .section {
+                background-color: rgba(47, 47, 47, 0.9);
+                padding: 20px;
+                border-radius: 15px;
+            }
+            .section:hover {
+                background-color: rgba(47, 47, 47, 1);
+            }
+            .section .text .highlight {
+                color: #fff;
+            }
+            .section .text .highlight:hover {
+                color: #bbb;
+            }
+        }
+        @media (max-width: 768px) {
+            .section, .section.reverse {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .section img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            .section .text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" aria-label="Go to Home Page"><img src="images/routt-logo.png" alt="Routt Distillery Logo" class="nav-logo"></a>
+        <a href="spirits.html" aria-label="View Our Spirits">Spirits</a>
+        <a href="cocktails.html" aria-label="Explore Cocktail Recipes">Cocktails</a>
+        <a href="about.html" aria-label="Learn About Us">About Us</a>
+        <a href="findus.html" aria-label="Find Our Location">Find Us</a>
+    </nav>
+
+    <div class="container">
+        <h1>Our Spirits</h1>
+
+        <section class="intro-section">
+            <p>At Routt Distillery, we craft our spirits with a passion for flavor and innovation, using the finest Colorado-grown grains to create bottles that reflect the rugged beauty of Steamboat Springs. Our small-batch creations are designed to be unique, showcasing the best of Colorado agriculture. From crisp vodkas to complex whiskeys—and gins that inspire distinct cocktails—each spirit elevates your sipping experience.</p>
+        </section>
+
+        <section class="section" id="single-malt">
+            <div class="text">
+                <h2>Emerald Mountain Single Malt Whiskey</h2>
+                <p>Aged in new and used oak barrels, our Emerald Mountain Single Malt Whiskey boasts a rich, malty depth with notes of caramel, honey, and a smooth, lingering finish. Savor it neat to appreciate its complexity or mix it into a <a href="cocktails.html#emerald-highball" class="highlight">Japanese Highball</a>.</p>
+            </div>
+            <img src="images/singlemalt.png" alt="Routt Distillery Single Malt Whiskey Bottle" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="storm-mountain-single-malt">
+            <div class="text">
+                <h2>Storm Mountain Single Malt Whiskey</h2>
+                <p>Inspired by the rugged Storm Mountain (aka Mt. Werner), this single malt is crafted with chocolate malt in the mash bill, delivering deep flavors with hints of cocoa, toasted oak, and a touch of spice. Best enjoyed by a crackling fire or in an <a href="cocktails.html#storm-old-fashioned" class="highlight">Old Fashioned</a>.</p>
+            </div>
+            <img src="images/stormsinglemalt.png" alt="Routt Distillery Storm Mountain Single Malt Whiskey Bottle" loading="lazy">
+        </section>
+
+        <section class="section" id="bourbon">
+            <div class="text">
+                <h2>Bourbon</h2>
+                <p>Still resting in barrels, our Bourbon with a 20% wheat mash bill promises a soft profile with notes of caramel, vanilla, and a smooth lingering finish. Check back soon for its release!</p>
+            </div>
+            <img src="images/bourbon.png" alt="Routt Distillery Bourbon Bottle" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="storm-mountain-bourbon">
+            <div class="text">
+                <h2>Storm Mountain Bourbon</h2>
+                <p>Also aging in barrels, this bold bourbon with chocolate malt in the mash bill will offer rich cocoa, warm spice, and oak undertones. Stay tuned for its debut!</p>
+            </div>
+            <img src="images/stormbourbon.png" alt="Routt Distillery Storm Mountain Bourbon Bottle" loading="lazy">
+        </section>
+
+        <section class="section" id="summer-gin">
+            <div class="text">
+                <h2>Summer Gin</h2>
+                <p>Inspired by Steamboat Springs summers, this light and floral gin bursts with citrus character and a subtle spice from pink peppercorns. Perfect for a <a href="cocktails.html#summer-gin" class="highlight">Gimlet</a> or gin and tonic.</p>
+            </div>
+            <img src="images/summergin.png" alt="Routt Distillery Summer Gin Bottle" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="winter-gin">
+            <div class="text">
+                <h2>Winter Gin</h2>
+                <p>Capturing a Steamboat winter, this gin balances juniper with bitter orange, cardamom, and nutmeg, finishing with a warm glow. Ideal for a <a href="cocktails.html#winter-gin" class="highlight">Fitzgerald</a> or martini.</p>
+            </div>
+            <img src="images/wintergin.png" alt="Routt Distillery Winter Gin Bottle" loading="lazy">
+        </section>
+
+        <section class="section" id="london-dry-gin">
+            <div class="text">
+                <h2>London Dry Gin</h2>
+                <p>A bold, juniper-forward take on the classic style, this gin bursts with botanicals, balanced by citrus and spice. Great for the classics like a <a href="cocktails.html#london-dry" class="highlight">Martini</a> and a <a href="cocktails.html#london-dry" class="highlight">Negroni</a>.</p>
+            </div>
+            <img src="images/londongin.png" alt="Routt Distillery London Dry Gin Bottle" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="sarvisberry">
+            <div class="text">
+                <h2>Sarvisberry Flavored Gin</h2>
+                <p>Infused with hand-picked Colorado sarvisberries soaked in Summer Gin for 2 months, this gin offers a fruity twist with subtle tartness and no added sugar—just berry sweetness. Try it in a <a href="cocktails.html#sarvis-gin" class="highlight">Fizz</a> or over ice. We only make around 100 bottles of this each year so get it when you can!</p>
+            </div>
+            <img src="images/sarvisgin.png" alt="Routt Distillery Sarvisberry Flavored Gin Bottle" loading="lazy">
+        </section>
+
+        <section class="section" id="vodka">
+            <div class="text">
+                <h2>Vodka</h2>
+                <p>Distilled from Colorado-grown grains, our premium vodka offers a silky-smooth texture with a clean, crisp finish. Gone are the days of burning, foul tasting vodka. You can tell this Vodka is made with love and care from Colorado Grain. Sip it chilled or mix it into a <a href="cocktails.html#vodka" class="highlight">Highball</a>.</p>
+            </div>
+            <img src="images/vodka.png" alt="Routt Distillery Vodka Bottle" loading="lazy">
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Routt Distillery. All rights reserved. | <a href="cookie-policy.html">Cookie Policy</a></p>
+        <p>
+            <span class="social-icons">
+                <a href="https://x.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@routtdistillery.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.google.com/maps/place/Routt+Distillery" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Google Maps"><i class="fab fa-google"></i></a>
+            </span>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Routt Distillery crafts unique, small-batch whiskey, gin, and vodka in Steamboat Springs, Colorado, using local grains. Visit our family-owned tasting room!">
+    <meta name="keywords" content="Routt Distillery, Steamboat Springs, Colorado spirits, small-batch whiskey, gin, vodka, family-owned distillery">
+    <meta name="author" content="Routt Distillery">
+    <title>Cocktails - Routt Distillery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .intro-section p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .section:hover {
+            background-color: rgba(248, 248, 248, 1);
+        }
+        .section img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .section .text {
+            flex: 1;
+        }
+        .section .text h3 {
+            font-size: 1.4em;
+            margin: 15px 0 5px;
+            color: #555;
+        }
+        .section .text p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .section .text .highlight {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #000;
+            text-decoration: none;
+        }
+        .section .text .highlight:hover {
+            color: #666;
+        }
+        .section .text ul {
+            margin: 5px 0 10px 20px;
+            padding-left: 0;
+            list-style-type: disc;
+            font-size: 1.1em;
+        }
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+        @media (prefers-color-scheme: dark) {
+            .intro-section {
+                background-color: rgba(47, 47, 47, 0.9);
+            }
+            .section {
+                background-color: rgba(47, 47, 47, 0.9);
+                padding: 20px;
+                border-radius: 15px;
+            }
+            .section:hover {
+                background-color: rgba(47, 47, 47, 1);
+            }
+            .section .text .highlight {
+                color: #fff;
+            }
+            .section .text .highlight:hover {
+                color: #bbb;
+            }
+            .section .text h3 {
+                color: #ccc;
+            }
+        }
+        @media (max-width: 768px) {
+            .section, .section.reverse {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .section img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            .section .text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" aria-label="Go to Home Page"><img src="images/routt-logo.png" alt="Routt Distillery Logo" class="nav-logo"></a>
+        <a href="spirits.html" aria-label="View Our Spirits">Spirits</a>
+        <a href="cocktails.html" aria-label="Explore Cocktail Recipes">Cocktails</a>
+        <a href="about.html" aria-label="Learn About Us">About Us</a>
+        <a href="findus.html" aria-label="Find Our Location">Find Us</a>
+    </nav>
+
+    <div class="container">
+        <h1>Our Cocktails</h1>
+
+        <section class="intro-section">
+            <p>At Routt Distillery, our cocktails are crafted to showcase the unique profiles of our hand-distilled spirits. From refreshing gin concoctions to robust whiskey blends, each recipe highlights the flavors of Colorado-grown grains and our innovative approach to distilling. Enjoy these creations at our Steamboat Springs tasting room or mix them up at home!</p>
+        </section>
+
+        <section class="section" id="summer-gin">
+            <div class="text">
+                <h2>Summer Gin Cocktails</h2>
+                <p>Bright and breezy, our <a href="spirits.html#summer-gin" class="highlight">Summer Gin</a> dances with citrus in cocktails that capture the essence of a Steamboat Springs summer. The Gimlet is a must-try—its zesty simplicity is irresistible.</p>
+                <h3>Gimlet</h3>
+                <ul>
+                    <li>2 oz Summer Gin</li>
+                    <li>3/4 oz fresh lime juice</li>
+                    <li>1/2 oz simple syrup</li>
+                </ul>
+                <p>Shake all ingredients with ice and strain into a chilled cocktail glass.</p>
+                <h3>Gin & Tonic</h3>
+                <ul>
+                    <li>2 oz Summer Gin</li>
+                    <li>4 oz tonic water (adjust to taste)</li>
+                </ul>
+                <p>Fill a highball glass with ice, pour in the gin, and top with tonic water. Stir gently and garnish with a citrus slice of your choice. Play around with different tonics and ratios—we like the 1:2 gin-to-tonic ratio.</p>
+            </div>
+            <img src="images/summer-gin-cocktail.png" alt="Summer Gin Gimlet Cocktail" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="winter-gin">
+            <div class="text">
+                <h2>Winter Gin Cocktails</h2>
+                <p>Cozy up with our <a href="spirits.html#winter-gin" class="highlight">Winter Gin</a>, where warming spices meet a rare harmony with bitters. The Fitzgerald, an overlooked classic, finds its perfect match here—our version cuts the sugar for a balanced sip that other gins can’t pull off. It’s one of our absolute favorites.</p>
+                <h3>Fitzgerald</h3>
+                <ul>
+                    <li>2 oz Winter Gin</li>
+                    <li>1/2 oz fresh lemon juice</li>
+                    <li>1/2 oz simple syrup</li>
+                    <li>2 dashes Angostura bitters</li>
+                </ul>
+                <p>Shake all ingredients with ice and strain into a chilled coupe glass.</p>
+                <h3>Martini</h3>
+                <ul>
+                    <li>2 oz Winter Gin</li>
+                    <li>0.5 oz dry vermouth (or 1 oz Dolin Blanc vermouth for a richer twist)</li>
+                </ul>
+                <p>Stir gin and vermouth with ice in a mixing glass until well-chilled. Strain into a chilled martini glass and garnish with a lemon twist or olive.</p>
+            </div>
+            <img src="images/winter-gin-cocktail.png" alt="Winter Gin Fitzgerald Cocktail" loading="lazy">
+        </section>
+
+        <section class="section" id="london-dry">
+            <div class="text">
+                <h2>London Dry Gin Cocktails</h2>
+                <p>Our <a href="spirits.html#london-dry-gin" class="highlight">London Dry Gin</a> shines in classic cocktails with its bold, juniper-forward profile. The dry Martini keeps it crisp, while the gin-heavy Negroni lets the botanicals take center stage.</p>
+                <h3>Martini</h3>
+                <ul>
+                    <li>2 oz London Dry Gin</li>
+                    <li>1/2 oz dry vermouth</li>
+                </ul>
+                <p>Stir gin and vermouth with ice in a mixing glass until well-chilled. Strain into a chilled martini glass and garnish with a lemon twist or olive.</p>
+                <h3>Negroni</h3>
+                <ul>
+                    <li>1.5 oz London Dry Gin</li>
+                    <li>1 oz Campari</li>
+                    <li>1 oz sweet vermouth</li>
+                </ul>
+                <p>Stir all ingredients with ice in a mixing glass until well-chilled. Strain into a rocks glass over a large ice cube and garnish with an orange twist.</p>
+            </div>
+            <img src="images/london-dry-cocktail.png" alt="London Dry Gin Negroni Cocktail" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="sarvis-gin">
+            <div class="text">
+                <h2>Sarvis Gin Cocktails</h2>
+                <p>Our <a href="spirits.html#sarvisberry" class="highlight">Sarvis Gin</a> is delicious neat over a big ice cube, but the Sarvis Gin Fizz brings the berry flavors to the forefront with carbonation and acidity.</p>
+                <h3>Neat</h3>
+                <ul>
+                    <li>2 oz Sarvis Gin</li>
+                </ul>
+                <p>Pour over a large ice cube in a rocks glass and enjoy.</p>
+                <h3>Sarvis Gin Fizz</h3>
+                <ul>
+                    <li>2 oz Sarvis Gin</li>
+                    <li>3/4 oz fresh lemon juice</li>
+                    <li>1/4 oz simple syrup</li>
+                    <li>3 oz sparkling water</li>
+                </ul>
+                <p>Build in a highball glass with ice: pour gin, lemon juice, and simple syrup, then top with sparkling water. Stir vertically to mix and serve.</p>
+            </div>
+            <img src="images/sarvis-cocktail.png" alt="Sarvis Gin Fizz Cocktail" loading="lazy">
+        </section>
+
+        <section class="section" id="vodka">
+            <div class="text">
+                <h2>Vodka Cocktails</h2>
+                <p>This is a <a href="spirits.html#vodka" class="highlight">Vodka</a> you can sip cold—we didn’t say shoot, we said sip. The classic Vodka Highball is a great way to enjoy its crisp profile.</p>
+                <h3>Neat</h3>
+                <ul>
+                    <li>2 oz Vodka (chilled)</li>
+                </ul>
+                <p>Pour into a chilled glass and sip slowly to enjoy its smooth, clean finish.</p>
+                <h3>Vodka Highball</h3>
+                <ul>
+                    <li>2 oz Vodka</li>
+                    <li>6 oz very bubbly, cold sparkling water</li>
+                    <li>Orange peel (for garnish)</li>
+                </ul>
+                <p>Build in a chilled highball glass with large ice cubes: pour vodka, top with very bubbly, cold sparkling water, and stir vertically to mix. Garnish with an orange peel.</p>
+            </div>
+            <img src="images/vodka-cocktail.png" alt="Vodka Highball Cocktail" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="emerald-highball">
+            <div class="text">
+                <h2>Emerald Single Malt Highball</h2>
+                <p>Pretty dang good served neat, but also works fantastic in a Japanese Whiskey Highball. The ratio is key—too much sparkling water makes it whiskey-flavored water, too little and it’s just watered-down whiskey. We like 1 part <a href="spirits.html#single-malt" class="highlight">Emerald Mountain Single Malt Whiskey</a> to 3 parts sparkling water but experiment from 1:2 to 1:4. Think this is crazy for whiskey and water? Search Youtube for Japanese Highball cocktail...</p>
+                <h3>Japanese Whiskey Highball</h3>
+                <ul>
+                    <li>2 oz Emerald Mountain Single Malt Whiskey</li>
+                    <li>6 oz very bubbly, cold sparkling water</li>
+                    <li>Citrus peel (for garnish)</li>
+                </ul>
+                <p>Build in a chilled highball glass with large ice cubes: pour whiskey, top with very bubbly, cold sparkling water, and stir vertically to mix. Garnish with a citrus peel of your choice. Cold is key—use the coldest glass and water you can get.</p>
+            </div>
+            <img src="singlemalt-cocktail.png" alt="Emerald Mountain Single Malt Highball Cocktail" loading="lazy">
+        </section>
+
+        <section class="section" id="storm-old-fashioned">
+            <div class="text">
+                <h2>Storm Mountain Old Fashioned</h2>
+                <p>Old Fashioned, baby! The chocolate malt in our <a href="spirits.html#storm-mountain-single-malt" class="highlight">Storm Mountain Single Malt Whiskey</a> pairs perfectly with the bitters in this classic cocktail.</p>
+                <h3>Old Fashioned</h3>
+                <ul>
+                    <li>2 oz Storm Mountain Single Malt Whiskey</li>
+                    <li>1/4 oz simple syrup</li>
+                    <li>2 dashes Angostura bitters</li>
+                    <li>Orange twist (for garnish)</li>
+                </ul>
+                <p>In a mixing glass, combine simple syrup and bitters. Add whiskey and ice, then stir until well-chilled. Strain over a large ice cube in a rocks glass and garnish with an orange twist.</p>
+            </div>
+            <img src="images/stormsinglemalt-cocktail.png" alt="Storm Mountain Old Fashioned Cocktail" loading="lazy">
+        </section>
+
+        <section class="section reverse" id="bourbon">
+            <div class="text">
+                <h2>Bourbon Cocktails</h2>
+                <p>Our <a href="spirits.html#bourbon" class="highlight">Bourbon</a> and <a href="spirits.html#storm-mountain-bourbon" class="highlight">Storm Mountain Bourbon</a> are still sleeping in the barrels. Check back in a year or so for some delicious cocktail recipes!</p>
+            </div>
+            <img src="images/bourbon-cocktail.png" alt="Bourbon Barrel Placeholder" loading="lazy">
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Routt Distillery. All rights reserved. | <a href="cookie-policy.html">Cookie Policy</a></p>
+        <p>
+            <span class="social-icons">
+                <a href="https://x.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@routtdistillery.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.google.com/maps/place/Routt+Distillery" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Google Maps"><i class="fab fa-google"></i></a>
+            </span>
+        </p>
+    </footer>
+</body>
+</html>

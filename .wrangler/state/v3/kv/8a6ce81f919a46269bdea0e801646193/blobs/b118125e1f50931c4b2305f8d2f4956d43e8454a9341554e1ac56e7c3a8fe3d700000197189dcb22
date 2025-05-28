@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Routt Distillery crafts unique, small-batch whiskey, gin, and vodka in Steamboat Springs, Colorado, using local grains. Visit our family-owned tasting room!">
+    <meta name="keywords" content="Routt Distillery, Steamboat Springs, Colorado spirits, small-batch whiskey, gin, vodka, family-owned distillery">
+    <meta name="author" content="Routt Distillery">
+    <title>About Us - Routt Distillery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .intro-section p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .about-section:hover {
+            background-color: rgba(248, 248, 248, 1);
+        }
+        .about-section img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .about-section .text {
+            flex: 1;
+        }
+        .about-section .text p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .about-section.reverse {
+            flex-direction: row-reverse;
+        }
+        @media (prefers-color-scheme: dark) {
+            .intro-section {
+                background-color: rgba(47, 47, 47, 0.9);
+            }
+            .about-section {
+                background-color: rgba(47, 47, 47, 0.9);
+                padding: 20px;
+                border-radius: 15px;
+            }
+            .about-section:hover {
+                background-color: rgba(47, 47, 47, 1);
+            }
+        }
+        @media (max-width: 768px) {
+            .about-section, .about-section.reverse {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .about-section img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            .about-section .text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" aria-label="Go to Home Page"><img src="images/routt-logo.png" alt="Routt Distillery Logo" class="nav-logo"></a>
+        <a href="spirits.html" aria-label="View Our Spirits">Spirits</a>
+        <a href="cocktails.html" aria-label="Explore Cocktail Recipes">Cocktails</a>
+        <a href="about.html" aria-label="Learn About Us">About Us</a>
+        <a href="findus.html" aria-label="Find Our Location">Find Us</a>
+    </nav>
+
+    <div class="container">
+        <h1>About Us</h1>
+
+        <section class="intro-section">
+            <p>Nestled in Steamboat Springs, Colorado, Routt Distillery is a small, family-run operation with a big passion for crafting unique local spirits that embody the rugged spirit of the Rocky Mountains. We work closely with our farmers and maltsters to source the finest Colorado-grown grains, ensuring every bottle reflects the land we love. After distilling, our spent grain goes to Hayden Fresh Farm, where it feeds their pigs and chickens, supporting local agriculture and sustainability. Each sip tells a story of quality, creativity, and our deep connection to the community.</p>
+        </section>
+
+        <section class="about-section reverse">
+            <div class="text">
+                <h2>A Family Affair</h2>
+                <p>Family is the heartbeat of Routt Distillery. We’re a close-knit crew, united by a shared love for crafting spirits that reflect our Colorado roots. From distilling to bottling, every step is a hands-on family effort, infused with laughter, hard work, and pride. We can’t wait to share our passion—and our spirits—with you.</p>
+            </div>
+            <img src="images/family.png" alt="The Routt Distillery Family" loading="lazy">
+        </section>
+
+        <section class="about-section">
+            <div class="text">
+                <h2>Meet the Distiller</h2>
+                <p>I’m Brad, the owner and distiller at Routt Distillery, where I channel my lifelong love for creating into every bottle we produce. With a Masters in Food Studies from NYU and a PhD in Economic Geography from UC Davis—where I dove deep into the wine industry and high-value agricultural regions—I bring a unique perspective to distilling. My journey began at Davis with my first distilling course, igniting a passion that burns brighter with every batch. Making unique products and sharing them with others is what I love to do. From our small-batch whiskeys to our one-of-a-kind gins, I pour my heart into every drop, delivering flavors that stand out and tell our story.</p>
+            </div>
+            <img src="images/brad.png" alt="Brad, Owner and Distiller of Routt Distillery" loading="lazy">
+        </section>
+
+        <section class="about-section reverse">
+            <div class="text">
+                <h2>Supply Chain Guru</h2>
+                <p>Libby Christensen, the Chief Supply Chain Logistics Specialist at Routt Distillery, is responsible for turning relationships into sources of raw ingredients that are the foundation of every bottle we produce. Whether sourcing unique grains, connecting with malters and farmers, or personally hauling the goods to keep things moving, she makes sure we have what we need to craft spirits that stand out. With a knack for tracking down the best ingredients and securing grants to fuel our creativity, Libby keeps the distillery running smoothly.</p>
+            </div>
+            <img src="images/libby.png" alt="Libby Christensen at Routt Distillery" loading="lazy">
+        </section>
+
+        <section class="about-section">
+            <div class="text">
+                <h2>Design Maestro</h2>
+                <p>Dan Lemmer, our head graphic designer and my brother-in-law, brings the Routt Distillery brand to life with his creative vision. From designing eye-catching labels to crafting our distinctive logo, Dan’s artistic talent ensures every bottle reflects the spirit of our Colorado roots. His work blends creativity with precision, making our spirits stand out on the shelf as much as they do in the glass.</p>
+            </div>
+            <img src="images/dan.png" alt="Dan Lemmer at Routt Distillery" loading="lazy">
+        </section>
+
+        <section class="about-section reverse">
+            <div class="text">
+                <h2>Our Little Helpers</h2>
+                <p>Our kids, ages 5 and 8, are the youngest members of the Routt Distillery crew. They bring boundless energy and curiosity to our family-friendly distillery, where having them around reminds us to always be the heroes they see us as. Their presence inspires us to act responsibly, crafting spirits with care for our community and the next generation.</p>
+            </div>
+            <img src="images/kids.png" alt="The Routt Kids at Routt Distillery" loading="lazy">
+        </section>
+
+        <section class="about-section">
+            <div class="text">
+                <h2>Our Distillery Dogs</h2>
+                <p>Oban and Jameson, our distillery dogs named after fine whiskeys, are beloved fixtures at Routt. Oban passed away last year, but his memory lives on in the stories we tell. Jameson, our resident lounge expert, can often be found sprawled across the tasting room couch, ready to keep you company with a wagging tail and a friendly nudge.</p>
+            </div>
+            <img src="images/dogs.png" alt="Oban and Jameson at Routt Distillery" loading="lazy">
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Routt Distillery. All rights reserved. | <a href="cookie-policy.html">Cookie Policy</a></p>
+        <p>
+            <span class="social-icons">
+                <a href="https://x.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/routtdistillery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@routtdistillery.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.google.com/maps/place/Routt+Distillery" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Google Maps"><i class="fab fa-google"></i></a>
+            </span>
+        </p>
+    </footer>
+</body>
+</html>

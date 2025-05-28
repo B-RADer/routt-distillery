@@ -1,0 +1,11 @@
+name = "routt-distillery-site"
+     main = "worker.js"
+     compatibility_date = "2025-05-28"
+
+     [[kv_namespaces]]
+     binding = "STATIC_ASSETS"
+     id = "8a6ce81f919a46269bdea0e801646193"
+
+     [[routes]]
+     pattern = "routtdistillery.com/*"
+     zone_name = "routtdistillery.com"
